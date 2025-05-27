@@ -1,0 +1,63 @@
+package com.example.greenzone_customer.ui.theme
+
+import androidx.compose.ui.graphics.Color
+
+val Purple80 = Color(0xFFD0BCFF)
+val PurpleGrey80 = Color(0xFFCCC2DC)
+val Pink80 = Color(0xFFEFB8C8)
+
+val Purple40 = Color(0xFF6650a4)
+val PurpleGrey40 = Color(0xFF625b71)
+val Pink40 = Color(0xFF7D5260)
+
+
+
+object GZColor {
+    val primary = Color(0xFF299345)
+    val green750 = Color(0xFF28A745)
+    val green700 = Color(0xFF31A569)
+    val green600 = Color(0xFF43D685)
+    val green500 = Color(0xFF97C93C)
+    val green200 = Color(0xFFE7FFCE)
+    val green100 = Color(0xFFEFFDEE)
+    val teal900 = Color(0xFF018786)
+    val teal700 = Color(0xFF06988B)
+    val black = Color(0xFF232323)
+    val gray900 = Color(0xFF434343)
+    val gray850 = Color(0xFF494949)
+    val gray700 = Color(0xFF666666)
+    val gray400 = Color(0xFFA59F9F)
+    val gray300 = Color(0xFFC9C3C3)
+    val gray200 = Color(0xFFEAE9E9)
+    val brown700 = Color(0xFF744D4A)
+    val red900 = Color(0xFFDC3545)
+    val red800 = Color(0xFFFF343B)
+    val milk = Color(0xFFFDE0BE)
+    val milk200 = Color(0xFFFEFBEA)
+    val orange700 = Color(0xFFFF6924)
+    val yellow700 = Color(0xFFFFA418)
+    val yellow600 = Color(0xFFFEB602)
+    val yellow500 = Color(0xFFFFC106)
+    val yellow300 = Color(0xFFF2CC57)
+    val pink500 = Color(0xFFF04C7F)
+    val pink200 = Color(0xFFFFC7E3)
+    val blue600 = Color(0xFF1773EA)
+    val blue500 = Color(0xFF3DABDC)
+    val white = Color(0xFFFFFFFF)
+    val white100 = Color(0xFFFDFCFC)
+    val transparent = Color(0x00000000)
+    val overlay = Color(0x80000000) // rgba(0,0,0,0.5) tương đương 50% alpha
+    val grayBg = Color(0xFFF5F5F5)
+    val fbBg = Color(0xFFF2F4F7)
+    val lightRed = Color(0xFFFDF3F2)
+    val lightBlue = Color(0xFFF1F9FC)
+    val invalid = Color(0xFFD32F2F)
+    val disabledBg = Color(0xFFE3E3E5)
+    val disabledText = Color(0xFFACACAE)
+    val borderInput = Color(0xFFD9D9D9)
+    val magenta = Color(0xFFFF00FF)
+    val violet = Color(0xFFC300FF)
+    val earthYellow = Color(0xFFBD9E02)
+    val lemon = Color(0xFF50AD03)
+    val shineYellow = Color(0xFFF5C105)
+}
