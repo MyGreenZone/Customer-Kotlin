@@ -1,6 +1,9 @@
 package com.example.greenzone_customer.constants
 
 object UIKeys {
+    const val MAX_QUANTITY = 99
+    const val  MIN_QUANTITY = 0
+
     const val TEXT_SIZE_SMALL = 10
     const val TEXT_SIZE_DEFAULT = 12
     const val TEXT_SIZE_TITLE = 14
