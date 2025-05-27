@@ -1,4 +1,4 @@
-package com.example.greenzone_customer.screens
+package com.example.greenzone_customer.screens.bottom_navs
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -11,11 +11,11 @@ import androidx.compose.ui.unit.sp
 import com.example.greenzone_customer.ui.theme.GZColor
 
 @Composable
-fun HomeScreen() {
+fun ProfileScreen() {
     Box(
         modifier = Modifier.fillMaxSize().background(GZColor.white),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = "Home", fontSize = 20.sp, color = GZColor.black)
+        Text(text = "ProfileScreen", fontSize = 20.sp, color = GZColor.black)
     }
 }
