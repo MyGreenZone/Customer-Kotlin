@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.compose.rememberNavController
 import com.example.greenzone_customer.ui.theme.GreenZoneCustomerTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,32 +23,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            GreenZoneCustomerTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+            GreenZoneCustomerTheme { val navController = rememberNavController()
+               MainScreen(navController =  navController)
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = Modifier.padding(4.dp),
-        fontSize = 20.sp,
-        color = Color.Yellow
-    )
-}
-
-
-@Composable
-fun GreetingPreview() {
-    GreenZoneCustomerTheme {
-        Greeting("Android")
-    }
-}
