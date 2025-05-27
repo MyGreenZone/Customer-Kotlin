@@ -21,7 +21,7 @@ fun RootNavigator(
     NavHost(
         navController = navController,
         route = GraphRoutes.ROOT,
-        startDestination = "splash",
+        startDestination = GraphRoutes.SplashScreen,
         builder = {
             composable(route = GraphRoutes.SplashScreen){ SplashScreen(navController = navController) }
 

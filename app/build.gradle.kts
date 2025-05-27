@@ -57,7 +57,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation("io.github.composecommunity:materialdesignicons:1.1.0")
+
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.0")
     implementation("androidx.navigation:navigation-compose:2.9.0")
@@ -70,9 +70,5 @@ dependencies {
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.0-rc01")
 
     implementation("io.github.a914-gowtham:compose-ratingbar:1.2.3")
-
-
-    implementation("com.google.dagger:hilt-android:2.51")
-
 
 }

@@ -16,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.greenzone_customer.R
+import com.example.greenzone_customer.navigations.graph_routes.GraphRoutes
 import com.example.greenzone_customer.ui.theme.GZColor
 import kotlinx.coroutines.delay
 
@@ -24,8 +25,8 @@ import kotlinx.coroutines.delay
 fun SplashScreen(navController: NavController) {
     LaunchedEffect(Unit) {
         delay(3000)
-        navController.navigate("home"){
-            popUpTo("splash"){inclusive = true}
+        navController.navigate(route = GraphRoutes.BOTTOM){
+            popUpTo(GraphRoutes.SplashScreen){inclusive = true}
         }
     }
     val configuration = LocalConfiguration.current

@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.navigation.compose.rememberNavController
+import com.example.greenzone_customer.screens.bottom_navs.HomeScreen
 import com.example.greenzone_customer.ui.theme.GreenZoneCustomerTheme
 
 class MainActivity : ComponentActivity() {
