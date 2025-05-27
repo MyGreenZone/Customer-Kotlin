@@ -10,6 +10,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.example.greenzone_customer.screens.HomeScreen
 import com.example.greenzone_customer.screens.SplashScreen
 
 
@@ -33,8 +34,8 @@ fun MainScreen(navController: NavHostController){
             startDestination = "splash",
             modifier = Modifier.padding(innerPadding)
         ){
-            composable("splash"){ SplashScreen() }
+            composable("splash"){ SplashScreen(navController = navController) }
+            composable("home") { HomeScreen() }
         }
-
     }
 }
