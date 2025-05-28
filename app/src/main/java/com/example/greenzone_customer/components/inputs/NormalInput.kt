@@ -12,6 +12,7 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -21,12 +22,12 @@ import com.example.greenzone_customer.ui.theme.GZColor
 
 @Composable
 fun NormalInput(
-    required: Boolean = true,
+    required: Boolean = false,
     value: String,
     onValueChange: (String) -> Unit,
     label: String,
     keyboardType: KeyboardType = KeyboardType.Text,
-    isValid: Boolean = false,
+    isValid: Boolean = true,
     inValidMessage: String = "Trường này không được để trống",
     modifier: Modifier = Modifier.padding(horizontal = 16.dp)
 ) {
@@ -35,15 +36,15 @@ fun NormalInput(
     ) {
         LabelInput(
             label = label,
-            required = required,
-            modifier = Modifier.padding(bottom = 4.dp)
+            required = required
         )
 
         TextField(
             value = value,
+            textStyle = TextStyle(fontSize = UIKeys.TEXT_SIZE_DEFAULT.sp),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(bottom = 4.dp)
+                .padding(vertical = 4.dp)
                 .border(
                     width = 1.dp,
                     color = GZColor.borderInput,
@@ -70,6 +71,6 @@ fun NormalInput(
 
 @Composable
 fun InvalidSuggestion(message: String = "Please enter this field") {
-    Text(text = message, color = GZColor.invalid, fontSize = UIKeys.TEXT_SIZE_DEFAULT.sp)
+    Text(text = message, color = GZColor.invalid, fontSize = UIKeys.TEXT_SIZE_SMALL.sp)
 }
 
