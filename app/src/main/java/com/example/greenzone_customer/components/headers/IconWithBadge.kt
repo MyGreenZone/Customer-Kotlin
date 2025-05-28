@@ -28,37 +28,45 @@ import com.example.greenzone_customer.ui.theme.GZColor
 
 @Composable
 fun IconWithBadge(
-    quantity: Int = 10,
+    quantity: Int = 99,
     onClick: () -> Unit = {}
 ) {
     Box(
         modifier = Modifier
-            .size(48.dp)
             .background(color = GZColor.white, shape = RoundedCornerShape(24.dp))
-            .shadow(
-                elevation = 1.dp,
-                shape = RoundedCornerShape(24.dp),
-                clip = true,
-                ambientColor = GZColor.gray700,
-                spotColor = GZColor.white
-            )
-            .clickable(onClick = onClick)
-            .padding(8.dp),
+            .clickable(onClick = onClick),
         content = {
-            Icon(
-                painter = painterResource(R.drawable.siren_24px),
-                contentDescription = "Icon bell",
-                tint = GZColor.primary,
+            Box(
                 modifier = Modifier
-                    .size(28.dp)
+                    .size(40.dp)
+                    .shadow(elevation = 1.dp, shape = RoundedCornerShape(24.dp), ambientColor = GZColor.gray300,
+                        clip = true, spotColor = GZColor.fbBg)
+                    .border(
+                        width = 1.dp,
+                        color = GZColor.gray200,
+                        shape = RoundedCornerShape(24.dp)),
+
+                contentAlignment = Alignment.Center,
+                content = {
+                    Icon(
+                        painter = painterResource(R.drawable.siren_24px),
+                        contentDescription = "Icon bell",
+                        tint = GZColor.primary,
+                        modifier = Modifier
+                            .size(28.dp)
+
+
+                    )
+                }
             )
+
             if (quantity < UIKeys.MAX_QUANTITY &&
                 quantity > UIKeys.MIN_QUANTITY
             ) {
                 Box(
                     modifier = Modifier
                         .size(20.dp)
-                        .absoluteOffset(x = 14.dp, y = -6.dp)
+                        .absoluteOffset(x = 22.dp, y = -6.dp)
                         .background(color = GZColor.red800, shape = RoundedCornerShape(10.dp)),
                     contentAlignment = Alignment.Center,
                     content = {
