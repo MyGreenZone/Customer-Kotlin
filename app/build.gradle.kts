@@ -70,5 +70,6 @@ dependencies {
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.0-rc01")
 
     implementation("io.github.a914-gowtham:compose-ratingbar:1.2.3")
+    implementation("io.github.being-eyram:iconsax-android:1.0.0")
 
 }

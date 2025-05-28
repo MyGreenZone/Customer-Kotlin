@@ -18,6 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             GreenZoneCustomerTheme { val navController = rememberNavController()
 
+//                ProfileScreen(navController = navController)
                 OrderScreen()
             }
         }

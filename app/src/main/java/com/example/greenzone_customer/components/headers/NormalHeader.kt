@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.greenzone_customer.ui.theme.GZColor
 import com.example.greenzone_customer.R
+import com.example.greenzone_customer.components.containers.GZRow
 import com.example.greenzone_customer.components.texts.TitleText
 import com.example.greenzone_customer.constants.UIKeys
 

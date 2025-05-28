@@ -1,7 +1,9 @@
 package com.example.greenzone_customer.screens.bottom_navs
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -13,11 +15,11 @@ import com.example.greenzone_customer.ui.theme.GZColor
 
 @Composable
 fun OrderScreen() {
-    Box(
+    Column(
         modifier = Modifier.fillMaxSize().background(GZColor.white),
-        contentAlignment = Alignment.Center
+        verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "OrderScreen", fontSize = 20.sp, color = GZColor.black)
+
         HeaderOrder(title = "Danh mục") { }
     }
 }

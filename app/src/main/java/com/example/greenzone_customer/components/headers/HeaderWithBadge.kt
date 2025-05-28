@@ -18,6 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.greenzone_customer.R
+import com.example.greenzone_customer.components.containers.GZRow
 import com.example.greenzone_customer.components.texts.TitleText
 import com.example.greenzone_customer.constants.UIKeys
 
@@ -36,9 +37,7 @@ fun HeaderWithBadge(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween,
         content = {
-            Row (
-                verticalAlignment = Alignment.CenterVertically,
-            ){
+            GZRow{
                 if (enableLeftIcon){
                     Icon(
                         painter = painterResource(leftIcon),
@@ -57,6 +56,11 @@ fun HeaderWithBadge(
                         fontSize = 20.sp
                     )
                 )
+            }
+            Row (
+                verticalAlignment = Alignment.CenterVertically,
+            ){
+
             }
 
 

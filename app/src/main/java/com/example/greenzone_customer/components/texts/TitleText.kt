@@ -14,15 +14,17 @@ import com.example.greenzone_customer.ui.theme.GZColor
 fun TitleText(
     modifier: Modifier = Modifier,
     text: String = "Title text",
-    textStyle: TextStyle = TextStyle(
+    textStyle: TextStyle = TextStyle()
+) {
+    val defaultStyle = TextStyle(
         color = GZColor.black,
         fontWeight = FontWeight.Normal,
         fontSize = UIKeys.TEXT_SIZE_TITLE.sp
     )
-) {
+
     Text(
         text = text,
         modifier = modifier,
-        style = textStyle
+        style = defaultStyle.merge(textStyle)
     )
 }

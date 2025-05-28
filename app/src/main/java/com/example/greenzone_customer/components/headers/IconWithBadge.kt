@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Notifications
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -22,6 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.greenzone_customer.R
+import com.example.greenzone_customer.compose_icons.Bell
 import com.example.greenzone_customer.constants.UIKeys
 import com.example.greenzone_customer.ui.theme.GZColor
 
@@ -49,13 +52,10 @@ fun IconWithBadge(
                 contentAlignment = Alignment.Center,
                 content = {
                     Icon(
-                        painter = painterResource(R.drawable.siren_24px),
-                        contentDescription = "Icon bell",
+                        imageVector = Bell,
+                        contentDescription = "icon bell",
                         tint = GZColor.primary,
-                        modifier = Modifier
-                            .size(28.dp)
-
-
+                        modifier = Modifier.size(28.dp)
                     )
                 }
             )
