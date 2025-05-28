@@ -5,9 +5,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.example.greenzone_customer.navigations.graph_routes.AuthRoutes
 import com.example.greenzone_customer.navigations.graph_routes.BottomRoutes
-import com.example.greenzone_customer.navigations.graph_routes.GraphRoutes
+import com.example.greenzone_customer.navigations.graph_routes.AppRoutes
 import com.example.greenzone_customer.screens.SplashScreen
+import com.example.greenzone_customer.screens.auth.LoginScreen
 import com.example.greenzone_customer.screens.bottom_navs.HomeScreen
 import com.example.greenzone_customer.screens.bottom_navs.MerchantScreen
 import com.example.greenzone_customer.screens.bottom_navs.OrderScreen
@@ -20,20 +22,20 @@ fun RootNavigator(
 ){
     NavHost(
         navController = navController,
-        route = GraphRoutes.ROOT,
-        startDestination = GraphRoutes.SplashScreen,
+        route = AppRoutes.ROOT,
+        startDestination = AppRoutes.SplashScreen,
         builder = {
-            composable(route = GraphRoutes.SplashScreen){ SplashScreen(navController = navController) }
-
+            composable(route = AppRoutes.SplashScreen){ SplashScreen(navController = navController) }
+            composable(route = AuthRoutes.LoginScreen){ LoginScreen(navController = navController) }
             navigation(
-                route = GraphRoutes.BOTTOM,
+                route = AppRoutes.BOTTOM,
                 startDestination = BottomRoutes.HomeScreen
             ) {
                 composable(route = BottomRoutes.HomeScreen) { HomeScreen() }
                 composable(route = BottomRoutes.OrderScreen) { OrderScreen() }
                 composable(route = BottomRoutes.MerchantScreen) { MerchantScreen() }
                 composable(route = BottomRoutes.VoucherScreen) { VoucherScreen() }
-                composable(route = BottomRoutes.ProfileScreen) { ProfileScreen() }
+                composable(route = BottomRoutes.ProfileScreen) { ProfileScreen(navController = navController) }
 
             }
         }

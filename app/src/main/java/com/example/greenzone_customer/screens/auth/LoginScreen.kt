@@ -14,18 +14,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.greenzone_customer.R
 import com.example.greenzone_customer.components.buttons.PrimaryButton
 import com.example.greenzone_customer.components.inputs.NormalInput
 import com.example.greenzone_customer.components.texts.TitleText
+import com.example.greenzone_customer.navigations.graph_routes.AppRoutes
 import com.example.greenzone_customer.ui.theme.GZColor
 
-@Preview(showSystemUi = true, showBackground = true)
+
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavHostController) {
     val config = LocalConfiguration.current
     val screenWidthDp = config.screenWidthDp.dp
     val imageWidth = (screenWidthDp.value / 1.5).dp
@@ -66,9 +67,12 @@ fun LoginScreen() {
 
         PrimaryButton(
             title = "Đăng nhập",
-            onClick = {}
+            onClick = {
+                navController.navigate(AppRoutes.BOTTOM) {
+                    popUpTo(AppRoutes.BOTTOM) { inclusive = true }
+                }
+            }
         )
-
 
 
     }

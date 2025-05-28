@@ -20,9 +20,7 @@ import com.example.greenzone_customer.ui.theme.GZColor
 fun PrimaryButton(
     title: String,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier
-        .fillMaxWidth(1f)
-        .height(48.dp),
+    modifier: Modifier = Modifier.height(48.dp),
     textStyle: TextStyle = TextStyle(
         color = GZColor.white,
         fontSize = UIKeys.TEXT_SIZE_DEFAULT.sp,

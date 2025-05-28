@@ -15,8 +15,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             GreenZoneCustomerTheme { val navController = rememberNavController()
-//               MainScreen(navController =  navController)
-                LoginScreen()
+               MainScreen(navController =  navController)
+//                LoginScreen(navController = navController)
             }
         }
     }
