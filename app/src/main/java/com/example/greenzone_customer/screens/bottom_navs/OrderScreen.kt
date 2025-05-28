@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
+import com.example.greenzone_customer.components.headers.HeaderOrder
 import com.example.greenzone_customer.ui.theme.GZColor
 
 @Composable
@@ -17,5 +18,6 @@ fun OrderScreen() {
         contentAlignment = Alignment.Center
     ) {
         Text(text = "OrderScreen", fontSize = 20.sp, color = GZColor.black)
+        HeaderOrder(title = "Danh mục") { }
     }
 }
