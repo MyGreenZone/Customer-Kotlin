@@ -54,7 +54,7 @@ fun NormalHeader(
                 text = title,
                 modifier = Modifier,
                 textStyle = TextStyle(
-                    fontWeight = FontWeight.Bold,
+                    fontWeight = FontWeight.SemiBold,
                     fontSize = UIKeys.TEXT_SIZE_HEADER.sp
                 )
             )

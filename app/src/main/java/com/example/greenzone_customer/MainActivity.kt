@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.navigation.compose.rememberNavController
 import com.example.greenzone_customer.screens.auth.LoginScreen
 import com.example.greenzone_customer.screens.bottom_navs.HomeScreen
+import com.example.greenzone_customer.screens.bottom_navs.ProfileScreen
 import com.example.greenzone_customer.ui.theme.GreenZoneCustomerTheme
 
 class MainActivity : ComponentActivity() {
@@ -16,7 +17,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             GreenZoneCustomerTheme { val navController = rememberNavController()
                MainScreen(navController =  navController)
-//                LoginScreen(navController = navController)
+                ProfileScreen(navController = navController)
             }
         }
     }

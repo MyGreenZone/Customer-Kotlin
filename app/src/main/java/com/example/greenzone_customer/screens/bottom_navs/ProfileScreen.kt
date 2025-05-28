@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.greenzone_customer.components.buttons.PrimaryButton
+import com.example.greenzone_customer.components.headers.IconWithBadge
 import com.example.greenzone_customer.components.headers.NormalHeader
 import com.example.greenzone_customer.navigations.graph_routes.AuthRoutes
 import com.example.greenzone_customer.ui.theme.GZColor
@@ -24,7 +25,7 @@ fun ProfileScreen(navController: NavHostController) {
 
     ) {
         NormalHeader(title = "Cá nhân")
-
+        IconWithBadge()
         PrimaryButton(
             modifier = Modifier.padding(top = 50.dp),
             title = "Log out",
