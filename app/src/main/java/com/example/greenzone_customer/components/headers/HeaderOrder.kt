@@ -49,7 +49,7 @@ fun HeaderOrder(
                 )
 
                 TitleText(
-                    text = "Danh mục", textStyle = TextStyle(
+                    text = title, textStyle = TextStyle(
                         fontWeight = FontWeight.Bold,
                         fontSize = UIKeys.TEXT_SIZE_HEADER.sp
                     )
@@ -84,7 +84,7 @@ fun HeaderOrder(
 
         }
 
-        HorizontalDivider(thickness = 1.dp, color = GZColor.borderInput)
+        HorizontalDivider(thickness = 1.dp, color = GZColor.gray200)
     }
 
 }

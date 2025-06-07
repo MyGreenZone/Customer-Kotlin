@@ -20,7 +20,6 @@ import androidx.compose.ui.unit.sp
 import com.example.greenzone_customer.R
 import com.example.greenzone_customer.components.containers.GZRow
 import com.example.greenzone_customer.components.texts.TitleText
-import com.example.greenzone_customer.constants.UIKeys
 
 @Composable
 fun HeaderWithBadge(
@@ -57,12 +56,6 @@ fun HeaderWithBadge(
                     )
                 )
             }
-            Row (
-                verticalAlignment = Alignment.CenterVertically,
-            ){
-
-            }
-
 
             if (enableBadge) {
                IconWithBadge(quantity = 88, onClick = {})

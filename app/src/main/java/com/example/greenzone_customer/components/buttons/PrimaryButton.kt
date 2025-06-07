@@ -20,22 +20,24 @@ import com.example.greenzone_customer.ui.theme.GZColor
 fun PrimaryButton(
     title: String,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier.height(48.dp),
-    textStyle: TextStyle = TextStyle(
-        color = GZColor.white,
-        fontSize = UIKeys.TEXT_SIZE_DEFAULT.sp,
-        fontWeight = FontWeight.Bold
-    ),
+    modifier: Modifier = Modifier,
+    textStyle: TextStyle = TextStyle(),
     enabled: Boolean = true,
     containerColor: Color = GZColor.primary
 ) {
+    val defaultTextStyle = TextStyle(
+        color = GZColor.white,
+        fontSize = UIKeys.TEXT_SIZE_DEFAULT.sp,
+        fontWeight = FontWeight.Bold
+    )
+
     Button(
         enabled = enabled,
-        modifier = modifier,
+        modifier = modifier.then(Modifier.height(48.dp)),
         onClick = onClick,
         shape = RoundedCornerShape(UIKeys.BORDER_RADIUS_DEFAULT.dp),
         colors = ButtonDefaults.buttonColors(containerColor = containerColor)
     ) {
-        Text(text = title, style = textStyle)
+        Text(text = title, style = defaultTextStyle.merge(textStyle))
     }
 }

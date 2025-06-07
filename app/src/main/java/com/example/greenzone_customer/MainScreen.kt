@@ -21,6 +21,7 @@ fun MainScreen(navController: NavHostController) {
     val enableBottomBar = currentRoute in BottomRoutes.routes
 
     Scaffold(
+
         modifier = Modifier.fillMaxSize(),
 
         content = { padding ->
