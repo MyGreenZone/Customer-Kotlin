@@ -6,4 +6,5 @@ object AppRoutes {
     const val MAIN ="MainGraph"
     const val AUTH = "AuthGraph"
     const val SplashScreen = "SplashScreen"
+    const val VerifyOTPScreen = "VerifyOTPScreen"
 }

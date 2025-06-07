@@ -43,7 +43,7 @@ fun LoginScreen(navController: NavHostController) {
     val loginViewModel: LoginViewModel = viewModel()
     val phoneNumber = loginViewModel.phoneNumber
     val phoneValid = loginViewModel.phoneValid
-
+    val phoneMessage = loginViewModel.phoneMessage
     // status bar
     StatusBar.changeStatusBarColor(context = context, GZColor.white)
 
@@ -79,11 +79,12 @@ fun LoginScreen(navController: NavHostController) {
             onValueChange = { newValue ->
                 phoneNumber.value = newValue
                 phoneValid.value = true
+                phoneMessage.value =""
             },
             isValid = phoneValid.value,
             label = "Số điện thoại",
             modifier = Modifier.padding(bottom = 24.dp),
-            inValidMessage = "Sai định dạng số điện thoại"
+            inValidMessage = phoneMessage.value
         )
 
         PrimaryButton(
@@ -91,8 +92,8 @@ fun LoginScreen(navController: NavHostController) {
             title = "Đăng nhập",
             onClick = {
                 if(loginViewModel.validate()){
-                    navController.navigate(AppRoutes.BOTTOM) {
-                        popUpTo(AppRoutes.BOTTOM) { inclusive = true }
+                    navController.navigate(AppRoutes.VerifyOTPScreen) {
+                        popUpTo(AppRoutes.VerifyOTPScreen) { inclusive = true }
                     }
                 }
 

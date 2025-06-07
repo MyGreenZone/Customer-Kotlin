@@ -10,6 +10,7 @@ import com.example.greenzone_customer.navigations.graph_routes.BottomRoutes
 import com.example.greenzone_customer.navigations.graph_routes.AppRoutes
 import com.example.greenzone_customer.screens.SplashScreen
 import com.example.greenzone_customer.screens.auth.LoginScreen
+import com.example.greenzone_customer.screens.auth.VerifyOTPScreen
 import com.example.greenzone_customer.screens.bottom_navs.HomeScreen
 import com.example.greenzone_customer.screens.bottom_navs.MerchantScreen
 import com.example.greenzone_customer.screens.bottom_navs.OrderScreen
@@ -27,6 +28,7 @@ fun RootNavigator(
         builder = {
             composable(route = AppRoutes.SplashScreen){ SplashScreen(navController = navController) }
             composable(route = AuthRoutes.LoginScreen){ LoginScreen(navController = navController) }
+            composable(route = AuthRoutes.VerifyOTPScreen){ VerifyOTPScreen(navController = navController) }
             navigation(
                 route = AppRoutes.BOTTOM,
                 startDestination = BottomRoutes.HomeScreen

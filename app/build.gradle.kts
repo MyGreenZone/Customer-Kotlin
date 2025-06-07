@@ -72,4 +72,6 @@ dependencies {
     implementation("io.github.a914-gowtham:compose-ratingbar:1.2.3")
     implementation("io.github.being-eyram:iconsax-android:1.0.0")
 
+    implementation("com.github.magneto3572:Magotp:1.0.5")
+
 }
